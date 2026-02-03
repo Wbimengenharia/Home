@@ -270,3 +270,52 @@ footer {
     height: 100px;
   }
 }
+
+/* ===== CORREÇÃO DEFINITIVA - SERVIÇOS ===== */
+
+.services-box .service {
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  gap: 18px;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.services-box .service img {
+  width: 110px !important;
+  height: 110px !important;
+  object-fit: cover;
+  border-radius: 14px;
+  display: block;
+}
+
+/* TEXTO */
+.services-box .service strong {
+  font-size: 17px;
+  margin-bottom: 6px;
+}
+
+.services-box .service p {
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.services-box .service span {
+  font-size: 14px;
+  color: var(--gold);
+  font-weight: 600;
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 900px) {
+  .services-box .service {
+    grid-template-columns: 120px 1fr;
+  }
+
+  .services-box .service img {
+    width: 120px !important;
+    height: 120px !important;
+  }
+}
+
+
