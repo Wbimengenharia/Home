@@ -30,11 +30,11 @@ body {
 .brand {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 24px;
 }
 
 .brand img {
-  height: 52px;        /* logo controlada */
+  height: 60px;        /* logo controlada */
 }
 
 .brand-text {
@@ -166,4 +166,5 @@ footer {
   background: #000;
   color: #fff;
 }
+
 
