@@ -1,4 +1,6 @@
-/* RESET */
+/* =======================
+   RESET
+======================= */
 * {
   margin: 0;
   padding: 0;
@@ -7,19 +9,23 @@
 
 html, body {
   width: 100%;
-  font-family: 'Arial', sans-serif;
+  font-family: Arial, sans-serif;
   background: #ffffff;
   color: #111;
 }
 
-/* CORES */
+/* =======================
+   VARIÁVEIS
+======================= */
 :root {
   --gold: #d4af37;
   --dark: #0b1220;
   --gray: #666;
 }
 
-/* BOTÕES */
+/* =======================
+   BOTÕES
+======================= */
 .btn {
   display: inline-block;
   padding: 12px 22px;
@@ -27,6 +33,7 @@ html, body {
   font-weight: 600;
   text-decoration: none;
   cursor: pointer;
+  border: none;
 }
 
 .btn.gold {
@@ -34,12 +41,18 @@ html, body {
   color: #000;
 }
 
+.btn.gold:hover {
+  opacity: 0.9;
+}
+
 .btn.small {
   padding: 8px 16px;
   font-size: 14px;
 }
 
-/* HEADER */
+/* =======================
+   HEADER
+======================= */
 .header {
   width: 100%;
   background: #fff;
@@ -94,20 +107,23 @@ html, body {
   white-space: nowrap;
 }
 
-/* HERO */
+/* =======================
+   HERO
+======================= */
 .hero {
   width: 100%;
   min-height: 520px;
-  background: url("assets/hero.png") center/cover no-repeat;
-  display: block;
+  background: url("assets/hero.png") center / cover no-repeat;
+  display: flex;
   align-items: center;
+  position: relative; /* ESSENCIAL */
 }
 
 .hero::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.45);
+  background: rgba(0, 0, 0, 0.45);
 }
 
 .hero-content {
@@ -121,6 +137,7 @@ html, body {
 .hero h1 {
   font-size: 42px;
   margin-bottom: 14px;
+  line-height: 1.2;
 }
 
 .hero h1 span {
@@ -133,7 +150,9 @@ html, body {
   margin-bottom: 22px;
 }
 
-/* SOBRE + SERVIÇOS */
+/* =======================
+   SOBRE + SERVIÇOS
+======================= */
 .about-services {
   padding: 80px 20px;
 }
@@ -143,14 +162,23 @@ html, body {
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 50px;
+  gap: 60px;
 }
 
-/* SOBRE */
+/* =======================
+   SOBRE
+======================= */
+.about-box h2 {
+  margin-bottom: 14px;
+}
+
 .about-box img {
   width: 100%;
-  border-radius: 12px;
-  margin: 18px 0;
+  max-width: 480px;
+  height: auto;
+  border-radius: 14px;
+  margin: 20px 0;
+  display: block;
 }
 
 .about-box h3 {
@@ -160,29 +188,40 @@ html, body {
 .about-box p {
   margin: 12px 0 18px;
   color: var(--gray);
+  line-height: 1.6;
 }
 
-/* SERVIÇOS */
+/* =======================
+   SERVIÇOS
+======================= */
+.services-box h2 {
+  margin-bottom: 18px;
+}
+
 .services-box .service {
   display: grid;
-  grid-template-columns: 60px 1fr;
-  gap: 14px;
+  grid-template-columns: 64px 1fr;
+  column-gap: 18px;
+  row-gap: 6px;
   align-items: start;
-  margin-bottom: 22px;
+  margin-bottom: 26px;
 }
 
 .service img {
-  width: 50px;
-  height: 50px;
+  width: 64px;
+  height: 64px;
+  border-radius: 8px;
   object-fit: cover;
 }
 
 .service strong {
   display: block;
+  font-size: 16px;
 }
 
 .service p {
   font-size: 14px;
+  line-height: 1.5;
   color: var(--gray);
 }
 
@@ -190,27 +229,33 @@ html, body {
   font-size: 14px;
   color: var(--gold);
   cursor: pointer;
+  margin-top: 4px;
+  display: inline-block;
 }
 
-/* CTA */
+/* =======================
+   CTA
+======================= */
 .cta {
   background: #000;
-  padding: 80px 20px;
+  padding: 90px 20px;
   text-align: center;
   color: #fff;
 }
 
 .cta-box h2 {
   font-size: 32px;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 
 .cta-box p {
-  margin-bottom: 22px;
+  margin-bottom: 26px;
   color: #ccc;
 }
 
-/* FOOTER */
+/* =======================
+   FOOTER
+======================= */
 footer {
   text-align: center;
   padding: 18px;
@@ -219,7 +264,9 @@ footer {
   color: #aaa;
 }
 
-/* RESPONSIVO */
+/* =======================
+   RESPONSIVO
+======================= */
 @media (max-width: 900px) {
   .menu {
     display: none;
@@ -238,3 +285,17 @@ footer {
   }
 }
 
+@media (max-width: 768px) {
+  .about-box img {
+    max-width: 100%;
+  }
+
+  .services-box .service {
+    grid-template-columns: 56px 1fr;
+  }
+
+  .service img {
+    width: 56px;
+    height: 56px;
+  }
+}
