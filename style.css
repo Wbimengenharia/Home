@@ -1,6 +1,4 @@
-/* =====================
-   RESET E BASE
-===================== */
+/* RESET */
 * {
   margin: 0;
   padding: 0;
@@ -14,9 +12,7 @@ body {
   line-height: 1.6;
 }
 
-/* =====================
-   HEADER
-===================== */
+/* HEADER */
 .header {
   background: #ffffff;
   border-bottom: 3px solid #c9a24d;
@@ -24,7 +20,7 @@ body {
 
 .container {
   max-width: 1100px;
-  margin: 0 auto;
+  margin: auto;
   padding: 15px 20px;
 }
 
@@ -38,20 +34,17 @@ body {
   height: 60px;
 }
 
-/* MENU */
 .header nav a {
-  color: #000000;
-  margin: 0 12px;
+  margin: 0 10px;
   text-decoration: none;
+  color: #000;
   font-weight: bold;
 }
 
-/* =====================
-   BOTÕES
-===================== */
+/* BOTÕES */
 .btn {
   background: #c9a24d;
-  color: #000000;
+  color: #000;
   padding: 12px 26px;
   border-radius: 6px;
   text-decoration: none;
@@ -59,29 +52,30 @@ body {
   display: inline-block;
 }
 
-.btn-header {
-  font-size: 14px;
-}
-
-/* =====================
-   HERO
-===================== */
+/* HERO – CORRIGIDO */
 .hero {
   min-height: 85vh;
   background:
     linear-gradient(
       to right,
-      rgba(0,0,0,0.55),
+      rgba(0,0,0,0.65),
       rgba(0,0,0,0.35)
     ),
-    url("assets/hero.png") center / cover no-repeat;
+    url("assets/hero.png") center center / cover no-repeat;
   display: flex;
   align-items: center;
 }
 
 .hero-content {
-  max-width: 620px;
-  padding: 40px 40px 40px 80px;
+  max-width: 1100px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+.hero-content h1,
+.hero-content p,
+.hero-content .btn {
+  max-width: 520px;
 }
 
 .hero h1 {
@@ -96,16 +90,17 @@ body {
 
 .hero p {
   margin-bottom: 30px;
-  font-size: 16px;
 }
 
-/* =====================
-   SEÇÕES
-===================== */
+/* SEÇÕES */
 .section {
-  padding: 80px 20px;
   max-width: 1100px;
-  margin: 0 auto;
+  margin: auto;
+  padding: 80px 20px;
+}
+
+.dark {
+  background: #050505;
 }
 
 .section h2 {
@@ -113,14 +108,7 @@ body {
   margin-bottom: 30px;
 }
 
-/* FUNDO ESCURO */
-.dark {
-  background: #050505;
-}
-
-/* =====================
-   GRID
-===================== */
+/* GRID */
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -134,25 +122,19 @@ body {
   align-items: center;
 }
 
-/* =====================
-   CARDS
-===================== */
+/* CARDS */
 .card {
-  background: #111111;
+  background: #111;
+  border: 1px solid #c9a24d;
   padding: 30px;
   border-radius: 8px;
-  border: 1px solid #c9a24d;
 }
 
-/* =====================
-   PORTFÓLIO
-===================== */
+/* PORTFÓLIO */
 .portfolio-item {
   position: relative;
   overflow: hidden;
   border-radius: 10px;
-  background: #111111;
-  min-height: 220px;
 }
 
 .portfolio-item img {
@@ -171,44 +153,34 @@ body {
   bottom: 0;
   width: 100%;
   background: rgba(0,0,0,0.7);
-  color: #c9a24d;
   text-align: center;
+  color: #c9a24d;
   padding: 10px;
-  font-weight: bold;
 }
 
-/* =====================
-   CTA
-===================== */
+/* CTA */
 .cta {
-  background: #000000;
   text-align: center;
   padding: 80px 20px;
+  background: #000;
 }
 
-.cta h2 {
-  margin-bottom: 10px;
-}
-
-.cta p {
-  margin-bottom: 25px;
-}
-
-/* =====================
-   FOOTER
-===================== */
+/* FOOTER */
 .footer {
-  background: #000000;
   text-align: center;
   padding: 20px;
   border-top: 1px solid #c9a24d;
 }
 
-/* =====================
-   MOBILE
-===================== */
-@media (max-width: 768px) {
+/* TELAS GRANDES */
+@media (min-width: 1400px) {
+  .hero {
+    background-position: center right;
+  }
+}
 
+/* MOBILE */
+@media (max-width: 768px) {
   .header-flex {
     flex-direction: column;
     gap: 15px;
@@ -216,12 +188,8 @@ body {
 
   .hero {
     min-height: auto;
-    padding: 100px 20px 60px;
-  }
-
-  .hero-content {
-    padding: 0;
-    max-width: 100%;
+    padding: 120px 0 80px;
+    background-position: center top;
   }
 
   .hero h1 {
