@@ -99,7 +99,7 @@ html, body {
   width: 100%;
   min-height: 520px;
   background: url("assets/hero.png") center/cover no-repeat;
-  display: flex;
+  display: block;
   align-items: center;
 }
 
@@ -237,3 +237,4 @@ footer {
     font-size: 30px;
   }
 }
+
