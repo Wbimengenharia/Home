@@ -2,47 +2,41 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Segoe UI", Arial, sans-serif;
+  font-family: "Inter", Arial, sans-serif;
 }
 
 body {
-  background: #f2f2f2;
+  background: #f5f5f5;
   color: #111;
 }
 
-/* HEADER */
+/* ================= HEADER ================= */
 .header {
   background: #fff;
   border-bottom: 3px solid #caa24c;
 }
 
 .header-inner {
-  max-width: 1250px;
+  max-width: 1200px;
   margin: auto;
-  padding: 10px 24px;   /* 🔴 aqui reduz a área branca */
+  padding: 12px 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  min-height: 80px;     /* altura controlada */
 }
 
-/* LOGO */
 .brand {
   display: flex;
   align-items: center;
-  gap: 24px;
+  gap: 10px;
 }
 
 .brand img {
-  height: 60px;        /* logo controlada */
-}
-
-.brand-text {
-  line-height: 1.1;
+  height: 48px;
 }
 
 .brand-text strong {
-  font-size: 15px;
+  font-size: 14px;
 }
 
 .brand-text span {
@@ -50,121 +44,137 @@ body {
   color: #caa24c;
 }
 
-/* MENU */
-.menu a {
-  margin: 0 14px;
-  font-size: 14px;
-  font-weight: 600;
-  position: relative;
+/* MENU DESKTOP */
+.menu {
+  display: flex;
+  gap: 20px;
 }
 
-.menu a.active::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -6px;
-  width: 100%;
-  height: 2px;
-  background: #caa24c;
+.menu a {
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  color: #000;
+}
+
+.menu a.active {
+  color: #caa24c;
 }
 
 /* BOTÃO */
-.header-btn {
+.btn {
+  background: #caa24c;
+  color: #000;
   padding: 10px 18px;
-  font-size: 14px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
 }
 
-/* HERO */
+/* ================= HERO ================= */
 .hero {
-  height: 520px;
+  min-height: 100vh;
   background: url("assets/hero.png") center / cover no-repeat;
   display: flex;
   align-items: center;
 }
 
 .hero-content {
-  max-width: 520px;
-  margin-left: 120px;
+  max-width: 1200px;
+  margin: auto;
+  padding: 40px 20px;
   color: #fff;
 }
 
 .hero h1 {
-  font-size: 38px;
-  line-height: 1.25;
+  font-size: 48px;
+  line-height: 1.1;
 }
 
-.hero span {
+.hero h1 span {
   color: #caa24c;
 }
 
 .hero p {
-  margin: 20px 0 26px;
-  line-height: 1.6;
-}
-
-/* SOBRE + SERVIÇOS */
-.about-services {
-  background: #fff;
-  padding: 80px 0;
-}
-
-.wrap {
-  max-width: 1250px;
-  margin: auto;
-  display: grid;
-  grid-template-columns: 1.1fr 1fr;
-  gap: 40px;
-}
-
-.about-box img {
-  width: 100%;
-  border-radius: 10px;
   margin: 20px 0;
+  max-width: 500px;
 }
 
-.services-box h2 {
-  margin-bottom: 20px;
+.hero .btn {
+  margin-top: 10px;
 }
 
-.service {
-  display: flex;
-  gap: 16px;
-  margin-bottom: 20px;
+/* ================= SEÇÕES ================= */
+section {
+  padding: 80px 20px;
+  background: #fff;
 }
 
-.service img {
-  width: 80px;
-  border-radius: 6px;
+.section-title {
+  font-size: 28px;
+  margin-bottom: 30px;
 }
 
-.service span {
-  color: #caa24c;
-  font-weight: 600;
+.services {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
 }
 
-/* CTA */
-.cta {
-  background: #0b0b0b;
-  padding: 90px 20px;
-}
-
-.cta-box {
-  max-width: 600px;
-  margin: auto;
-  text-align: center;
-  color: #fff;
-}
-
-.cta p {
-  margin: 14px 0 26px;
-}
-
-/* FOOTER */
-footer {
-  text-align: center;
+.service-card {
+  background: #f9f9f9;
   padding: 20px;
+  border-radius: 12px;
+}
+
+/* ================= CTA ================= */
+.cta {
   background: #000;
   color: #fff;
+  text-align: center;
+  padding: 80px 20px;
 }
 
+.cta h2 {
+  font-size: 32px;
+  margin-bottom: 15px;
+}
 
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+
+  .header-inner {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .menu {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .hero {
+    min-height: 90vh;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .hero p {
+    font-size: 14px;
+  }
+
+  section {
+    padding: 50px 15px;
+  }
+
+  .services {
+    grid-template-columns: 1fr;
+  }
+
+  .cta h2 {
+    font-size: 24px;
+  }
+}
