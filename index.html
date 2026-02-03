@@ -8,130 +8,88 @@
 </head>
 <body>
 
-  <!-- HEADER -->
-  <header class="header">
-    <div class="container header-flex">
-      <img src="assets/logo.png" alt="WBIM Engenharia" class="logo">
+<header class="header">
+  <div class="container header-flex">
+    <img src="assets/logo.png" alt="WBIM Engenharia" class="logo">
 
-      <nav>
-        <a href="#home">Home</a>
-        <a href="#sobre">Sobre</a>
-        <a href="#servicos">Serviços</a>
-        <a href="#portfolio">Portfólio</a>
-        <a href="#contato">Contato</a>
-      </nav>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#portfolio">Portfólio</a>
+      <a href="#contato">Contato</a>
+    </nav>
 
-      <a
-        href="https://wa.me/5598984691378?text=Ol%C3%A1,%20gostaria%20de%20saber%20mais%20sobre%20seus%20servi%C3%A7os!!"
-        target="_blank"
-        class="btn btn-header"
-      >
-        Solicite um Orçamento
-      </a>
-    </div>
-  </header>
-
-  <!-- HERO (CORRIGIDO DEFINITIVO) -->
-  <section class="hero" id="home">
-    <div class="hero-wrapper">
-
-      <img src="assets/hero.png" alt="WBIM Engenharia" class="hero-image">
-
-      <div class="hero-text">
-        <h1>
-          Da Ideia à Obra,<br>
-          <span>Construindo com Excelência</span>
-        </h1>
-
-        <p>
-          Projetos, BIM e execução de obras com planejamento,
-          qualidade e responsabilidade técnica.
-        </p>
-
-        <a href="#servicos" class="btn">Nossos Serviços</a>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- SOBRE -->
-  <section id="sobre" class="section dark">
-    <div class="grid-2">
-      <img src="assets/logo.png" alt="WBIM Engenharia">
-      <div>
-        <h2>Sobre Nós</h2>
-        <p>
-          A WBIM Engenharia atua com foco em projetos, BIM,
-          execução e gerenciamento de obras, entregando soluções
-          técnicas completas, seguras e eficientes.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- SERVIÇOS -->
-  <section id="servicos" class="section">
-    <h2>Nossos Serviços</h2>
-
-    <div class="grid">
-      <div class="card">
-        <strong>Execução de Obras</strong><br>
-        Planejamento, controle e acompanhamento técnico.
-      </div>
-
-      <div class="card">
-        <strong>Fiscalização de Obras</strong><br>
-        Garantia de qualidade, prazos e segurança.
-      </div>
-
-      <div class="card">
-        <strong>Gerenciamento de Projetos</strong><br>
-        Coordenação técnica do início ao fim.
-      </div>
-    </div>
-  </section>
-
-  <!-- PORTFÓLIO -->
-  <section id="portfolio" class="section dark">
-    <h2>Projetos & Obras</h2>
-
-    <div class="grid">
-      <div class="portfolio-item">
-        <img src="assets/portfolio/projeto1.png" alt="Projeto Residencial">
-        <span>Projeto Residencial</span>
-      </div>
-
-      <div class="portfolio-item">
-        <img src="assets/portfolio/projeto2.png" alt="Projeto Comercial">
-        <span>Projeto Comercial</span>
-      </div>
-
-      <div class="portfolio-item">
-        <img src="assets/portfolio/projeto3.png" alt="Acompanhamento de Obra">
-        <span>Acompanhamento de Obra</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA -->
-  <section class="cta" id="contato">
-    <h2>Precisa de um orçamento?</h2>
-    <p>Fale agora com a WBIM Engenharia.</p>
-
-    <a
-      href="https://wa.me/5598984691378?text=Ol%C3%A1,%20gostaria%20de%20saber%20mais%20sobre%20seus%20servi%C3%A7os!!"
-      target="_blank"
-      class="btn"
-    >
-      Solicite Agora
+    <a class="btn"
+       href="https://wa.me/5598984691378?text=Ol%C3%A1,%20gostaria%20de%20saber%20mais%20sobre%20seus%20servi%C3%A7os!!"
+       target="_blank">
+       Solicite um Orçamento
     </a>
-  </section>
+  </div>
+</header>
 
-  <!-- FOOTER -->
-  <footer class="footer">
-    <p>© 2026 WBIM Engenharia • Todos os direitos reservados</p>
-  </footer>
+<!-- HERO SIMPLES E CORRETO -->
+<section class="hero" id="home">
+  <img src="assets/hero.png" alt="Cidade" class="hero-img">
 
-  <script src="script.js"></script>
+  <div class="hero-overlay"></div>
+
+  <div class="hero-content">
+    <h1>Da Ideia à Obra,<br><span>Construindo com Excelência</span></h1>
+    <p>Projetos, BIM e execução de obras com planejamento e responsabilidade técnica.</p>
+    <a href="#servicos" class="btn">Nossos Serviços</a>
+  </div>
+</section>
+
+<section id="sobre" class="section dark">
+  <div class="container grid-2">
+    <img src="assets/logo.png" alt="WBIM Engenharia">
+    <div>
+      <h2>Sobre Nós</h2>
+      <p>
+        A WBIM Engenharia atua com projetos, BIM, execução e gerenciamento de obras,
+        entregando soluções técnicas completas.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="servicos" class="section">
+  <div class="container">
+    <h2>Nossos Serviços</h2>
+    <div class="grid">
+      <div class="card">Execução de Obras</div>
+      <div class="card">Fiscalização de Obras</div>
+      <div class="card">Gerenciamento de Projetos</div>
+    </div>
+  </div>
+</section>
+
+<section id="portfolio" class="section dark">
+  <div class="container">
+    <h2>Projetos & Obras</h2>
+    <div class="grid">
+      <img src="assets/portfolio/projeto1.png" alt="Projeto 1">
+      <img src="assets/portfolio/projeto2.png" alt="Projeto 2">
+      <img src="assets/portfolio/projeto3.png" alt="Projeto 3">
+    </div>
+  </div>
+</section>
+
+<section id="contato" class="cta">
+  <h2>Precisa de um orçamento?</h2>
+  <p>Fale agora com a WBIM Engenharia</p>
+  <a class="btn"
+     href="https://wa.me/5598984691378?text=Ol%C3%A1,%20gostaria%20de%20saber%20mais%20sobre%20seus%20servi%C3%A7os!!"
+     target="_blank">
+     Solicite Agora
+  </a>
+</section>
+
+<footer class="footer">
+  <p>© 2026 WBIM Engenharia</p>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
