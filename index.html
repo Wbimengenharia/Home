@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>WBIM Engenharia | Da Ideia à Obra</title>
   <link rel="stylesheet" href="style.css">
 </head>
@@ -10,43 +10,89 @@
 <body>
 
 <header class="header">
-  <div class="container header-flex">
-
+  <div class="header-inner">
     <div class="brand">
       <img src="assets/logo.png" alt="WBIM Engenharia">
-      <div class="brand-text">
+      <div>
         <strong>WBIM Engenharia</strong>
         <span>Da Ideia à Obra</span>
       </div>
     </div>
 
-    <nav class="menu">
-      <a href="#" class="active">Home</a>
-      <a href="#sobre">Sobre</a>
-      <a href="#servicos">Serviços</a>
-      <a href="#portfolio">Projetos</a>
-      <a href="#contato">Contato</a>
+    <nav>
+      <a class="active">Home</a>
+      <a>Sobre Nós</a>
+      <a>Serviços</a>
+      <a>Projetos</a>
+      <a>Contato</a>
     </nav>
 
-    <a class="btn btn-gold header-btn" href="#contato">
-      Solicite um Orçamento
-    </a>
-
+    <a class="btn gold">Solicite um Orçamento</a>
   </div>
 </header>
 
+<!-- HERO -->
 <section class="hero">
-  <div class="hero-overlay"></div>
-  <div class="container hero-content">
-    <h1>
-      Da Ideia à Obra,<br>
-      <span>Construindo com Excelência</span>
-    </h1>
+  <div class="hero-content">
+    <h1>Da Ideia à Obra,<br><span>Construindo com Excelência</span></h1>
     <p>
       Projetos, BIM e execução de obras com planejamento,
       qualidade e responsabilidade técnica.
     </p>
-    <a class="btn btn-gold" href="#servicos">Nossos Serviços</a>
+    <a class="btn gold">Nossos Serviços</a>
+  </div>
+</section>
+
+<!-- SOBRE + SERVIÇOS -->
+<section class="about-services">
+  <div class="wrap">
+
+    <div class="about-box">
+      <h2>Sobre Nós</h2>
+      <img src="assets/sobre.png" alt="WBIM Engenharia">
+      <h3>Construindo com Qualidade e Compromisso</h3>
+      <p>
+        A WBIM Engenharia oferece soluções completas em projetos,
+        BIM, planejamento e execução de obras.
+      </p>
+      <a class="btn gold small">Saiba Mais</a>
+    </div>
+
+    <div class="services-box">
+      <h2>Nossos Serviços</h2>
+
+      <div class="service">
+        <img src="assets/servico1.png">
+        <strong>Execução de Obras</strong>
+        <p>Gestão completa da obra com qualidade e segurança.</p>
+        <span>Saiba Mais</span>
+      </div>
+
+      <div class="service">
+        <img src="assets/servico2.png">
+        <strong>Fiscalização de Obras</strong>
+        <p>Acompanhamento técnico rigoroso.</p>
+        <span>Saiba Mais</span>
+      </div>
+
+      <div class="service">
+        <img src="assets/servico3.png">
+        <strong>Gerenciamento de Projetos</strong>
+        <p>Planejamento e controle de prazos e custos.</p>
+        <span>Saiba Mais</span>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <div class="cta-box">
+    <h2>Precisa de um Orçamento?</h2>
+    <p>Fale agora com a WBIM Engenharia</p>
+    <a class="btn gold">Solicite Agora</a>
   </div>
 </section>
 
@@ -54,5 +100,6 @@
   © 2026 WBIM Engenharia — Todos os direitos reservados
 </footer>
 
+<script src="script.js"></script>
 </body>
 </html>
