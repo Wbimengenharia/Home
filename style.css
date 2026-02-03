@@ -1,4 +1,6 @@
-/* RESET */
+/* =====================
+   RESET GLOBAL
+===================== */
 * {
   margin: 0;
   padding: 0;
@@ -12,7 +14,9 @@ body {
   line-height: 1.6;
 }
 
-/* HEADER */
+/* =====================
+   HEADER
+===================== */
 .header {
   background: #ffffff;
   border-bottom: 3px solid #c9a24d;
@@ -20,7 +24,7 @@ body {
 
 .container {
   max-width: 1100px;
-  margin: auto;
+  margin: 0 auto;
   padding: 15px 20px;
 }
 
@@ -35,72 +39,96 @@ body {
 }
 
 .header nav a {
-  margin: 0 10px;
+  color: #000000;
   text-decoration: none;
-  color: #000;
   font-weight: bold;
+  margin: 0 10px;
 }
 
-/* BOTÕES */
+/* =====================
+   BOTÕES
+===================== */
 .btn {
   background: #c9a24d;
-  color: #000;
+  color: #000000;
   padding: 12px 26px;
   border-radius: 6px;
   text-decoration: none;
   font-weight: bold;
   display: inline-block;
+  transition: opacity 0.3s ease;
 }
 
-/* HERO – CORRIGIDO */
+.btn:hover {
+  opacity: 0.85;
+}
+
+/* =====================
+   HERO (DEFINITIVO)
+===================== */
 .hero {
-  min-height: 85vh;
-  background:
-    linear-gradient(
-      to right,
-      rgba(0,0,0,0.65),
-      rgba(0,0,0,0.35)
-    ),
-    url("assets/hero.png") center center / cover no-repeat;
-  display: flex;
-  align-items: center;
+  background: #000000;
 }
 
-.hero-content {
-  max-width: 1100px;
-  margin: auto;
-  padding: 0 20px;
+.hero-wrapper {
+  position: relative;
+  width: 100%;
+  height: 85vh;
+  overflow: hidden;
 }
 
-.hero-content h1,
-.hero-content p,
-.hero-content .btn {
+/* IMAGEM */
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* OVERLAY */
+.hero-wrapper::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(0,0,0,0.75),
+    rgba(0,0,0,0.25)
+  );
+}
+
+/* TEXTO */
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 80px;
+  transform: translateY(-50%);
   max-width: 520px;
+  color: #ffffff;
+  z-index: 2;
 }
 
-.hero h1 {
+.hero-text h1 {
   font-size: 42px;
   line-height: 1.2;
   margin-bottom: 20px;
 }
 
-.hero h1 span {
+.hero-text h1 span {
   color: #c9a24d;
 }
 
-.hero p {
+.hero-text p {
   margin-bottom: 30px;
 }
 
-/* SEÇÕES */
+/* =====================
+   SEÇÕES
+===================== */
 .section {
   max-width: 1100px;
-  margin: auto;
+  margin: 0 auto;
   padding: 80px 20px;
-}
-
-.dark {
-  background: #050505;
 }
 
 .section h2 {
@@ -108,7 +136,13 @@ body {
   margin-bottom: 30px;
 }
 
-/* GRID */
+.dark {
+  background: #050505;
+}
+
+/* =====================
+   GRID
+===================== */
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -122,15 +156,19 @@ body {
   align-items: center;
 }
 
-/* CARDS */
+/* =====================
+   CARDS
+===================== */
 .card {
-  background: #111;
+  background: #111111;
   border: 1px solid #c9a24d;
   padding: 30px;
   border-radius: 8px;
 }
 
-/* PORTFÓLIO */
+/* =====================
+   PORTFÓLIO
+===================== */
 .portfolio-item {
   position: relative;
   overflow: hidden;
@@ -153,46 +191,60 @@ body {
   bottom: 0;
   width: 100%;
   background: rgba(0,0,0,0.7);
-  text-align: center;
   color: #c9a24d;
+  text-align: center;
   padding: 10px;
+  font-weight: bold;
 }
 
-/* CTA */
+/* =====================
+   CTA
+===================== */
 .cta {
+  background: #000000;
   text-align: center;
   padding: 80px 20px;
-  background: #000;
 }
 
-/* FOOTER */
+.cta h2 {
+  margin-bottom: 10px;
+}
+
+.cta p {
+  margin-bottom: 25px;
+}
+
+/* =====================
+   FOOTER
+===================== */
 .footer {
+  background: #000000;
   text-align: center;
   padding: 20px;
   border-top: 1px solid #c9a24d;
 }
 
-/* TELAS GRANDES */
-@media (min-width: 1400px) {
-  .hero {
-    background-position: center right;
-  }
-}
-
-/* MOBILE */
+/* =====================
+   MOBILE
+===================== */
 @media (max-width: 768px) {
+
   .header-flex {
     flex-direction: column;
     gap: 15px;
   }
 
-  .hero {
-    min-height: auto;
-    padding: 120px 0 80px;
-    background-position: center top;
+  .hero-wrapper {
+    height: 70vh;
   }
 
-  .hero h1 {
+  .hero-text {
+    left: 20px;
+    right: 20px;
+    max-width: 100%;
+  }
+
+  .hero-text h1 {
     font-size: 28px;
   }
 
