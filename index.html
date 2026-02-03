@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>WBIM Engenharia | Da Ideia à Obra</title>
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<header class="topo">
-  <div class="container topo-flex">
+<header class="header">
+  <div class="container header-flex">
     <img src="assets/logo.png" class="logo" alt="WBIM Engenharia">
 
     <nav>
@@ -21,39 +21,46 @@
       <a href="#contato">Contato</a>
     </nav>
 
-    <a class="btn-topo" href="#contato">Solicite um Orçamento</a>
+    <a class="btn btn-gold" href="#contato">Solicite um Orçamento</a>
   </div>
 </header>
 
 <!-- HERO -->
 <section class="hero">
-  <img src="assets/hero.png" alt="Cidade" class="hero-img">
+  <div class="hero-overlay"></div>
 
-  <div class="hero-text">
-    <h1>Da Ideia à Obra,<br><span>Construindo com Excelência</span></h1>
-    <p>Projetos, BIM e execução de obras com planejamento, qualidade e responsabilidade técnica.</p>
-    <a class="btn" href="#servicos">Nossos Serviços</a>
+  <div class="container hero-content">
+    <h1>
+      Da Ideia à Obra,<br>
+      <span>Construindo com Excelência</span>
+    </h1>
+    <p>
+      Projetos, BIM e execução de obras com planejamento, qualidade
+      e responsabilidade técnica.
+    </p>
+    <a class="btn btn-gold" href="#servicos">Nossos Serviços</a>
   </div>
 </section>
 
 <!-- SOBRE -->
-<section id="sobre" class="secao clara">
-  <div class="container grid-2">
-    <img src="assets/sobre.png" class="img-box">
+<section id="sobre" class="section light">
+  <div class="container about-grid">
+    <img src="assets/sobre.png" alt="WBIM Engenharia">
 
     <div>
       <h2>Sobre Nós</h2>
       <p>
-        A WBIM Engenharia atua com foco em soluções técnicas completas, unindo
-        projetos, BIM, planejamento e execução de obras com excelência.
+        A WBIM Engenharia atua com soluções técnicas completas,
+        integrando projetos, BIM, planejamento e execução de obras,
+        sempre com foco em excelência e compromisso.
       </p>
-      <a class="btn">Saiba Mais</a>
+      <a class="btn btn-gold">Saiba Mais</a>
     </div>
   </div>
 </section>
 
 <!-- SERVIÇOS -->
-<section id="servicos" class="secao escura">
+<section id="servicos" class="section dark">
   <div class="container">
     <h2>Nossos Serviços</h2>
 
@@ -66,14 +73,14 @@
 </section>
 
 <!-- PORTFÓLIO -->
-<section id="portfolio" class="secao clara">
+<section id="portfolio" class="section light">
   <div class="container">
     <h2>Projetos & Obras</h2>
 
     <div class="cards">
-      <div class="card-img">Projeto Residencial</div>
-      <div class="card-img">Projeto Comercial</div>
-      <div class="card-img">Acompanhamento de Obra</div>
+      <div class="card">Projeto Residencial</div>
+      <div class="card">Projeto Comercial</div>
+      <div class="card">Acompanhamento de Obra</div>
     </div>
   </div>
 </section>
@@ -82,7 +89,9 @@
 <section id="contato" class="cta">
   <h2>Precisa de um orçamento?</h2>
   <p>Fale agora com a WBIM Engenharia</p>
-  <a class="btn" href="https://wa.me/5598984691378?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20seus%20serviços!!">
+
+  <a class="btn btn-gold"
+     href="https://wa.me/5598984691378?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20seus%20serviços!!">
     Solicite Agora
   </a>
 </section>
