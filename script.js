@@ -83,3 +83,13 @@ document.querySelectorAll('img').forEach(img => {
     img.style.display = 'none';
   };
 });
+
+const whatsappButtons = document.querySelectorAll('.btn.gold');
+
+whatsappButtons.forEach(btn => {
+  btn.addEventListener('click', () => {
+    // abre WhatsApp
+  });
+});
+
+
